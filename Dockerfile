@@ -7,5 +7,3 @@ RUN apk add
 
 RUN cargo install librespot
 RUN apk add snapcast-server
-
-COPY snapserver.conf /etc/snapserver.conf
