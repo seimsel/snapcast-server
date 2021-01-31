@@ -2,7 +2,7 @@ FROM rust:alpine
 
 EXPOSE 1704 1705 1780
 
-RUN apk add
+RUN apk add \
   g++ \
   make \
   libasound2-dev
