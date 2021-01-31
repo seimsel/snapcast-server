@@ -10,4 +10,4 @@ RUN apk update && apk add \
 RUN cargo install librespot
 RUN apk add snapcast-server
 
-ENTRYPOINT ["snapcast-server"]
+ENTRYPOINT ["snapserver"]
