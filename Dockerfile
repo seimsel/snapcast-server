@@ -2,10 +2,12 @@ FROM rust:alpine
 
 EXPOSE 1704 1705 1780
 
-RUN apk add \
+RUN apk update && apk add \
   g++ \
   make \
-  libasound2-dev
+  alsa-lib-dev
 
 RUN cargo install librespot
 RUN apk add snapcast-server
+
+ENTRYPOINT ["snapcast-server"]
