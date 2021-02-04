@@ -28,6 +28,7 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
 COPY --from=librespot /usr/local/cargo/bin/librespot /usr/local/bin/
 COPY ./entrypoint.sh ./entrypoint.sh
 
+RUN printf "[server]\nenable-dbus=no\n" >> /etc/avahi/avahi-daemon.conf
 RUN chmod +x ./entrypoint.sh
 
 ENTRYPOINT ["./entrypoint.sh"]
