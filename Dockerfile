@@ -25,4 +25,6 @@ RUN apt-get update \
 COPY --from=librespot /usr/local/cargo/bin/librespot /usr/local/bin/
 COPY ./entrypoint.sh ./entrypoint.sh
 
+RUN chmod +x ./entrypoint.sh
+
 ENTRYPOINT ["./entrypoint.sh"]
