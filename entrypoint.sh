@@ -3,6 +3,6 @@ set -euo pipefail
 
 avahi-daemon --daemonize --no-drop-root
 
-envsubst < /etc/snapserver.conf
+echo "$(envsubst < /etc/snapserver.conf)" > /etc/snapserver.conf
 
 exec snapserver
