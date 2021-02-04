@@ -7,6 +7,7 @@ RUN apt-get update && apt-get --yes install \
   build-essential \
   libasound2-dev \
   avahi-daemon \
+  gettext \
   && apt-get clean && rm -fR /var/lib/apt/lists
 
 RUN cargo install librespot
