@@ -5,7 +5,7 @@ FROM rust:1.45 AS librespot
 
 RUN apt-get update && apt-get --yes install \
   build-essential \
-  alsa-lib-dev \
+  libasound2-dev \
   avahi-daemon \
   && apt-get clean && rm -fR /var/lib/apt/lists
 
