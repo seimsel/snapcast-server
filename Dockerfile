@@ -1,6 +1,3 @@
-ARG ARCH=amd64
-ARG SNAPCAST_VERSION=0.23.0
-
 FROM rust:1.45 AS librespot
 
 RUN apt-get update && apt-get --yes install \
@@ -11,6 +8,9 @@ RUN apt-get update && apt-get --yes install \
 RUN cargo install librespot
 
 FROM debian:buster
+
+ARG ARCH=amd64
+ARG SNAPCAST_VERSION=0.23.0
 
 EXPOSE 1704 1705 1780
 
